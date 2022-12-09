@@ -1,4 +1,3 @@
-import "./ToDoForm.css";
 import { useState } from "react";
 import { add } from "../../todoReducer";
 import { useDispatch } from "react-redux";
@@ -9,7 +8,7 @@ function ToDoForm() {
 
   return (
     <div>
-      <form>
+      <div>
         <input
           value={value}
           onInput={(e) => {
@@ -25,9 +24,9 @@ function ToDoForm() {
           }}
           className="float-end mt-2 btn btn-success"
         >
-          add
+          Add
         </button>
-      </form>
+      </div>
     </div>
   );
 }

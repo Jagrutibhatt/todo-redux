@@ -12,9 +12,17 @@ const todoSlice = createSlice({
       console.log(action.payload);
       state.value.push(action.payload);
     },
+    update: (state, action) => {
+      console.log(action.payload);
+      state.value.push(action.payload);
+    },
   },
 });
 
-export const { add } = todoSlice.actions;
+// a gateway for listening to data.
+export const todoSelector = (state) => state.todo.value;
+
+// for components to access actions to be able to dispatch them
+export const { add, update } = todoSlice.actions;
 
 export default todoSlice.reducer;
